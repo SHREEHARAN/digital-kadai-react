@@ -33,7 +33,7 @@ export const hero = {
     "We set up and run the online side of shops and small businesses, wherever they are, for one fixed monthly fee starting at ₹2,999.",
   cta: "Get a free online check",
   promise: "More calls in 30 days, or don’t pay for month\u00a0two.",
-  image: { src: "images/hero.webp", alt: "A shop owner smiling at a customer message on her phone at the counter of a small neighbourhood store" },
+  image: { src: "images/hero.webp", alt: "Illustration of a neighbourhood shopfront with notifications above it: 24 calls this week from Google, a new 5-star review and 3 new WhatsApp orders" },
 };
 
 // The example listing in the hero phone. The shop is imaginary.
@@ -81,38 +81,38 @@ export const services = {
       title: "Show up properly on Google Maps",
       text: "Photos, correct hours, weekly offers and a reply to every review within 48 hours.",
       image: "images/maps.webp",
-      alt: "A passerby checking his phone outside a small green shopfront with plants by the door",
+      alt: "Illustration of a shop pinned on a map, with its Google listing showing a 4.6 rating and open hours, an owner reply to a review, and direction requests up 64%",
     },
     {
       title: "Answer customers on WhatsApp instantly",
       text: "A product catalogue with prices, greeting and quick replies, and offers sent to your customer lists.",
       image: "images/whatsapp.webp",
-      alt: "A salon owner replying to a customer on her phone at the reception desk, beside an appointment book",
+      alt: "Illustration of a WhatsApp Business chat answering a customer about stock and timings, beside a product catalogue, quick replies and a 2 minute average reply time",
     },
     {
       title: "Post on Instagram every week",
       text: "12 posts and 4 reels planned every month in the language your customers speak, built around your sales and festivals.",
       image: "images/instagram.webp",
-      alt: "Handmade products laid out on a table and photographed on a phone mounted on a small tripod",
+      alt: "Illustration of a shop’s Instagram grid beside a monthly content calendar of posts and reels, a post approval message and reach up 38%",
     },
     {
       title: "Have a website you can share with anyone",
       text: "Your products, location and a WhatsApp button, on a domain registered in your name.",
       image: "images/website.webp",
-      alt: "A café owner smiling at her laptop at the counter, with pastries in the display case behind her",
+      alt: "Illustration of a shop website on a laptop and a phone, with products, an Order on WhatsApp button, a map and a domain registered in the owner’s name",
     },
     {
       tag: "For exporters and B2B",
       title: "Win buyers on LinkedIn and B2B marketplaces",
       text: "A LinkedIn profile buyers take seriously, and marketplace listings like IndiaMART or Alibaba rewritten to bring better enquiries.",
       image: "images/b2b.webp",
-      alt: "A manufacturer showing a product sample to a buyer in a small warehouse stacked with boxed goods",
+      alt: "Illustration of a founder’s LinkedIn profile and a verified B2B marketplace listing for machined fittings, with an export enquiry and enquiries up 42%",
     },
     {
       title: "Festival and sale campaigns",
       text: "Ready to send posters, WhatsApp messages and posts for every festival and season sale, so you never scramble at the last minute.",
       image: "images/festival.webp",
-      alt: "A shopkeeper setting up a festive display in a store lit with string lights for a seasonal sale",
+      alt: "Illustration of a festive sale campaign under string lights: a poster, a WhatsApp broadcast to 248 customers and an Instagram story, ready for every festival",
     },
   ],
 };
