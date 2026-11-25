@@ -206,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:48px 0 64px}
 .brand span,.nav .btn{white-space:nowrap}
 @media (max-width:420px){.nav-shell{padding-left:8px;padding-right:8px}.nav{gap:8px;padding:8px 8px 8px 12px}.nav .brand .heading-6{font-size:18px;line-height:28px}}
 .photos-one{height:136px;overflow:hidden}
-.photos-one img{width:100%;height:100%;object-fit:cover;display:block}
+.photos-one img{width:100%;height:100%;object-fit:cover;object-position:62% 45%;display:block}
 .svc .art{object-fit:cover;background:var(--surface)}
 .hero-visual{position:relative;width:100%;max-width:480px;min-height:480px}
 .hero-photo{position:absolute;left:0;top:32px;width:72%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:24px;display:block;background:var(--surface)}

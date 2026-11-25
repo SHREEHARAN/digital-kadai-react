@@ -33,31 +33,31 @@ export const hero = {
     "We set up and run the online side of shops and small businesses, wherever they are, for one fixed monthly fee starting at ₹2,999.",
   cta: "Get a free online check",
   promise: "More calls in 30 days, or don’t pay for month\u00a0two.",
-  image: { src: "images/hero.webp", alt: "A boutique owner smiling at her phone at the counter while a customer browses behind her" },
+  image: { src: "images/hero.webp", alt: "A shop owner smiling at a customer message on her phone at the counter of a small neighbourhood store" },
 };
 
 // The example listing in the hero phone. The shop is imaginary.
 export const listing = {
-  name: "Maple & Thread",
+  name: "The Corner Store",
   note: "An example listing for an imaginary shop",
   before: {
     rating: "3.8",
     reviews: 11,
-    category: "Clothing store",
+    category: "Store",
     issues: ["Hours not added", "No website"],
     update: "Nothing posted yet",
-    review: "“Good collection, but nobody picks up the phone.”",
+    review: "“Good stuff, but nobody picks up the phone.”",
     reply: null,
   },
   after: {
     rating: "4.6",
     reviews: 138,
-    category: "Clothing boutique",
+    category: "Neighbourhood store",
     open: "Open now, closes 9:30 pm",
-    update: { title: "Latest update, 2 days ago", text: "Weekend sale: 20% off the new cotton collection." },
-    review: "“Lovely collection and they reply on WhatsApp quickly.”",
-    reply: "Thank you! See you again when the new season arrives.",
-    photo: "images/instagram.webp",
+    update: { title: "Latest update, 2 days ago", text: "Weekend offer: 10% off on all fresh bakes." },
+    review: "“Friendly staff, and they reply on WhatsApp quickly.”",
+    reply: "Thank you! See you again this weekend.",
+    photo: "images/maps.webp",
   },
 };
 
@@ -66,7 +66,7 @@ export const problem = {
   subtitle: "If your shop looks empty or outdated there, they choose the next one on the list.",
   items: [
     { icon: "pin", title: "On Google Maps", text: "They search to find you, check your hours and read your reviews." },
-    { icon: "wa", title: "On WhatsApp", text: "They message to ask the price, the size and whether it’s in stock." },
+    { icon: "wa", title: "On WhatsApp", text: "They message to ask the price, the timings and whether it’s in stock." },
     { icon: "ig", title: "On Instagram", text: "They scroll to see what’s new before they make the trip." },
   ],
 };
@@ -87,13 +87,13 @@ export const services = {
       title: "Answer customers on WhatsApp instantly",
       text: "A product catalogue with prices, greeting and quick replies, and offers sent to your customer lists.",
       image: "images/whatsapp.webp",
-      alt: "A shop owner typing a message on her phone at the counter, beside a bill book and a cup of tea",
+      alt: "A salon owner replying to a customer on her phone at the reception desk, beside an appointment book",
     },
     {
       title: "Post on Instagram every week",
       text: "12 posts and 4 reels planned every month in the language your customers speak, built around your sales and festivals.",
       image: "images/instagram.webp",
-      alt: "Folded cotton shirts and scarves in teal, mustard and maroon laid out to be photographed on a phone",
+      alt: "Handmade products laid out on a table and photographed on a phone mounted on a small tripod",
     },
     {
       title: "Have a website you can share with anyone",
@@ -106,13 +106,13 @@ export const services = {
       title: "Win buyers on LinkedIn and B2B marketplaces",
       text: "A LinkedIn profile buyers take seriously, and marketplace listings like IndiaMART or Alibaba rewritten to bring better enquiries.",
       image: "images/b2b.webp",
-      alt: "A garment exporter showing a sample shirt to a buyer in his factory, with packed cartons behind them",
+      alt: "A manufacturer showing a product sample to a buyer in a small warehouse stacked with boxed goods",
     },
     {
       title: "Festival and sale campaigns",
       text: "Ready to send posters, WhatsApp messages and posts for every festival and season sale, so you never scramble at the last minute.",
       image: "images/festival.webp",
-      alt: "A boutique owner arranging marigolds at a counter lit with string lights for a festival sale",
+      alt: "A shopkeeper setting up a festive display in a store lit with string lights for a seasonal sale",
     },
   ],
 };
@@ -144,7 +144,7 @@ export const pricing = {
     {
       key: "growth",
       name: "Growth",
-      forWho: "For retail shops, cafés, boutiques and salons",
+      forWho: "For retail shops, cafés, salons and clinics",
       price: "₹7,999",
       setup: "+ ₹7,999 one time setup",
       features: ["Everything in Starter", "12 Instagram posts a month", "4 reels planned and scripted", "A monthly content plan in your customers’ languages"],
@@ -154,7 +154,7 @@ export const pricing = {
     {
       key: "full",
       name: "Full",
-      forWho: "For exporters and established businesses",
+      forWho: "For manufacturers, exporters and established businesses",
       price: "₹14,999",
       setup: "+ ₹14,999 one time setup",
       features: ["Everything in Growth", "A website on your own domain", "LinkedIn for the owner, 8 posts a month", "Every festival campaign pack"],
