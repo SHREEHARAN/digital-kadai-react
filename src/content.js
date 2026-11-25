@@ -28,12 +28,22 @@ export const nav = [
 
 export const hero = {
   badge: "Founding offer: our first 3 shops pay half for 3 months",
-  titleLines: ["Get found on Google, WhatsApp and Instagram", "without doing it\u00a0yourself"],
+  // The headline reads: titleLead, then each rotate word in turn, then titleTail.
+  titleLead: "Get found on",
+  rotate: ["Google Maps", "WhatsApp", "Instagram"],
+  titleTail: "without doing it\u00a0yourself",
   subtitle:
     "We set up and run the online side of shops and small businesses, wherever they are, for one fixed monthly fee starting at ₹2,999.",
   cta: "Get a free online check",
   promise: "More calls in 30 days, or don’t pay for month\u00a0two.",
-  image: { src: "images/hero.webp", alt: "Illustration of a neighbourhood shopfront with notifications above it: 24 calls this week from Google, a new 5-star review and 3 new WhatsApp orders" },
+  // Optional photo behind the phone. Set to null for a plain green panel.
+  image: { src: "images/hero.webp" },
+  // Example notifications floating around the phone.
+  chips: [
+    { icon: "phone", title: "+24 calls", text: "this week" },
+    { icon: "star", title: "New 5-star review", text: "Replied in 2 hours" },
+    { icon: "wa", title: "3 WhatsApp orders", text: "Answered instantly" },
+  ],
 };
 
 // The example listing in the hero phone. The shop is imaginary.
@@ -71,6 +81,20 @@ export const problem = {
   ],
 };
 
+export const marquee = {
+  label: "Everywhere your customers look",
+  items: [
+    { icon: "pin", label: "Google Maps" },
+    { icon: "star", label: "Google reviews" },
+    { icon: "wa", label: "WhatsApp Business" },
+    { icon: "ig", label: "Instagram" },
+    { icon: "globe", label: "Your own website" },
+    { icon: "in", label: "LinkedIn" },
+    { icon: "sparkle", label: "Festival campaigns" },
+    { icon: "check", label: "B2B marketplaces" },
+  ],
+};
+
 export const taglineLines = ["You run the shop.", "We run your online side."];
 
 export const services = {
@@ -80,39 +104,45 @@ export const services = {
     {
       title: "Show up properly on Google Maps",
       text: "Photos, correct hours, weekly offers and a reply to every review within 48 hours.",
+      visual: "maps",
       image: "images/maps.webp",
-      alt: "Illustration of a shop pinned on a map, with its Google listing showing a 4.6 rating and open hours, an owner reply to a review, and direction requests up 64%",
+      alt: "A young man checking directions on his phone outside a small teal neighbourhood store with plants by the door",
     },
     {
       title: "Answer customers on WhatsApp instantly",
       text: "A product catalogue with prices, greeting and quick replies, and offers sent to your customer lists.",
+      visual: "whatsapp",
       image: "images/whatsapp.webp",
-      alt: "Illustration of a WhatsApp Business chat answering a customer about stock and timings, beside a product catalogue, quick replies and a 2 minute average reply time",
+      alt: "A salon owner smiling as she replies to a customer on her phone at the reception desk",
     },
     {
       title: "Post on Instagram every week",
       text: "12 posts and 4 reels planned every month in the language your customers speak, built around your sales and festivals.",
+      visual: "instagram",
       image: "images/instagram.webp",
-      alt: "Illustration of a shop’s Instagram grid beside a monthly content calendar of posts and reels, a post approval message and reach up 38%",
+      alt: "A café owner photographing coffee and pastries with a phone on a small tripod",
     },
     {
       title: "Have a website you can share with anyone",
       text: "Your products, location and a WhatsApp button, on a domain registered in your name.",
+      visual: "website",
       image: "images/website.webp",
-      alt: "Illustration of a shop website on a laptop and a phone, with products, an Order on WhatsApp button, a map and a domain registered in the owner’s name",
+      alt: "A shop owner smiling at his laptop at the counter of his home decor and stationery store",
     },
     {
       tag: "For exporters and B2B",
       title: "Win buyers on LinkedIn and B2B marketplaces",
       text: "A LinkedIn profile buyers take seriously, and marketplace listings like IndiaMART or Alibaba rewritten to bring better enquiries.",
+      visual: "b2b",
       image: "images/b2b.webp",
-      alt: "Illustration of a founder’s LinkedIn profile and a verified B2B marketplace listing for machined fittings, with an export enquiry and enquiries up 42%",
+      alt: "A manufacturer showing a machined brass part to a visiting buyer in his workshop",
     },
     {
       title: "Festival and sale campaigns",
       text: "Ready to send posters, WhatsApp messages and posts for every festival and season sale, so you never scramble at the last minute.",
+      visual: "festival",
       image: "images/festival.webp",
-      alt: "Illustration of a festive sale campaign under string lights: a poster, a WhatsApp broadcast to 248 customers and an Instagram story, ready for every festival",
+      alt: "A shopkeeper arranging marigolds and lamps for a festive sale under string lights",
     },
   ],
 };

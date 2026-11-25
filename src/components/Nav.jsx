@@ -3,6 +3,7 @@ import { site, nav } from "../content";
 import { waLink } from "../lib/links";
 import useTheme from "../hooks/useTheme";
 import useActiveSection from "../hooks/useActiveSection";
+import { useEffect, useState } from "react";
 
 const ids = nav.map((n) => n.id);
 
@@ -16,8 +17,15 @@ export default function Nav() {
   const [theme, toggle] = useTheme();
   const active = useActiveSection(ids);
   const dark = theme === "dark";
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 12);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
   return (
-    <header className="nav-shell">
+    <header className={`nav-shell${scrolled ? " scrolled" : ""}`}>
       <nav className="nav" aria-label="Main">
         <a className="brand" href="#top" aria-label={`${site.brand}, back to top`}>
           <BrandMark />

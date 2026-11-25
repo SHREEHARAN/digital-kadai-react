@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { site, listing } from "../content";
 import { asset } from "../lib/links";
@@ -74,22 +74,28 @@ function After({ hidden }) {
   );
 }
 
-// The phone mockup with a before / after switch.
-export default function ListingDemo({ photo }) {
-  const [view, setView] = useState("after");
+// The phone mockup with a before / after switch. It flips between the two on its own
+// until the visitor picks one.
+export default function ListingDemo() {
+  const [view, setView] = useState("before");
+  const [auto, setAuto] = useState(true);
+  useEffect(() => {
+    if (!auto || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setView("after"); return; }
+    const first = setTimeout(() => setView("after"), 1600);
+    const t = setInterval(() => setView((v) => (v === "after" ? "before" : "after")), 4200);
+    return () => { clearTimeout(first); clearInterval(t); };
+  }, [auto]);
+  const pick = (v) => { setAuto(false); setView(v); };
   return (
     <div className="demo">
       <div className="toggle" role="group" aria-label="Compare the example listing">
-        <button type="button" className="button-sm" aria-pressed={view === "before"} onClick={() => setView("before")}>Before</button>
-        <button type="button" className="button-sm" aria-pressed={view === "after"} onClick={() => setView("after")}>With {site.brand}</button>
+        <button type="button" className="button-sm" aria-pressed={view === "before"} onClick={() => pick("before")}>Before</button>
+        <button type="button" className="button-sm" aria-pressed={view === "after"} onClick={() => pick("after")}>With {site.brand}</button>
       </div>
-      <div className="hero-visual">
-        {photo}
-        <div className="phone">
-          <div className="screen">
-            <Before hidden={view !== "before"} />
-            <After hidden={view !== "after"} />
-          </div>
+      <div className="phone">
+        <div className="screen">
+          <Before hidden={view !== "before"} />
+          <After hidden={view !== "after"} />
         </div>
       </div>
       <p className="demo-note caption-5">{listing.note}</p>

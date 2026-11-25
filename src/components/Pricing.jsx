@@ -3,10 +3,11 @@ import SectionHead from "./SectionHead";
 import { pricing } from "../content";
 import { waLink } from "../lib/links";
 
-function Plan({ plan }) {
+function Plan({ plan, i }) {
   const cls = ["plan", plan.highlight && "pick", plan.custom && "custom"].filter(Boolean).join(" ");
   return (
-    <article className={cls}>
+    <article className={cls} data-reveal style={{ "--d": `${i * 0.08}s` }}>
+      {plan.highlight && <span className="badge caption-3">Most popular</span>}
       <div className="plan-head">
         <h3 className="heading-5">{plan.name}</h3>
         <p className="body-6 muted">{plan.forWho}</p>
@@ -31,11 +32,11 @@ export default function Pricing() {
   return (
     <section className="pricing" id="pricing" aria-labelledby="pricing-h">
       <div className="wrap">
-        <SectionHead id="pricing-h" title={pricing.title} subtitle={pricing.subtitle} />
+        <SectionHead id="pricing-h" eyebrow="Pricing" title={pricing.title} subtitle={pricing.subtitle} />
         <div className="plans">
-          {pricing.plans.map((p) => <Plan key={p.key} plan={p} />)}
+          {pricing.plans.map((p, i) => <Plan key={p.key} plan={p} i={i} />)}
         </div>
-        <div className="found-box">
+        <div className="found-box" data-reveal>
           <div>
             <h3 className="heading-6">{f.title}</h3>
             <p className="body-3 muted">{f.text}</p>
